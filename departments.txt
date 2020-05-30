@@ -1,0 +1,85 @@
+department,item
+flowers,flowers
+produce,apples
+produce,pears
+produce,fruit
+produce,bananas
+produce,oranges
+produce,grapes
+produce,berries
+produce,lemons
+produce,limes
+produce,cucumbers
+produce,tomatoes
+produce,carrots
+produce,celery
+produce,lettuce
+produce,spinach
+produce,avocado
+produce,green beans
+produce,cauliflower
+produce,peppers
+produce,squash
+produce,mushrooms
+produce,potatoes
+produce,onions
+produce,garlic
+produce,herbs
+bakery,buns
+bakery,muffins
+bakery,cookies
+seafood,shrimp
+seafood,salmon
+seafood,fish
+seafood,crab
+meat,chicken
+meat,beef
+meat,pork
+meat,bacon
+meat,turkey
+meat,ham
+dairy,milk
+dairy,cream
+dairy,eggs
+dairy,cheese
+dairy,yogurt
+dairy,cream
+dairy,butter
+dairy,margarine
+deli,sliced
+deli,roast beef
+deli,cheese
+deli,hummus
+deli,dip
+aisles,cereal
+aisles,sugar
+aisles,flour
+aisles,chocolate
+aisles,cocoa
+aisles,vanilla
+aisles,cookies
+aisles,chips
+aisles,salsa
+aisles,popcorn
+aisles,soda
+aisles,juice
+aisles,water
+aisles,canned
+aisles,paper
+aisles,plastic
+aisles,cleaning
+aisles,pet
+aisles,dry
+aisles,snacks
+aisles,candy
+frozen,frozen
+frozen,ice cream
+frozen,waffles
+frozen,popsicles
+aisles,pickles
+frozen,french toast sticks
+dairy,shredded mozzerella
+aisles,preserves
+aisles,orange marmalade
+meat,breakfast sausage
+aisles,little bites
