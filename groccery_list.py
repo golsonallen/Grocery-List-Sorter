@@ -127,5 +127,3 @@ class Groccery_List_Organizer:
 if __name__ == "__main__":
     g = Groccery_List_Organizer()
     g.main()
-
-#test
