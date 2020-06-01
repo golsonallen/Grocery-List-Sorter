@@ -50,6 +50,7 @@ class Groccery_List_Organizer:
                     self.user_dict[department].append(item)
                     break
                 #word contained within item ex. grape(fruit) and (cream)er
+                #CHECK VICE VERSA
                 elif len([itm for itm in self.departments[department] if itm in item]) > 0:
                     self.user_dict[department].append(item)
                     break
