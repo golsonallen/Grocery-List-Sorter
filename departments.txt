@@ -37,7 +37,7 @@ meat,beef
 meat,pork
 meat,bacon
 meat,turkey
-meat,ham
+deli,ham
 dairy,milk
 dairy,cream
 dairy,eggs
@@ -82,3 +82,9 @@ dairy,shredded mozzerella
 aisles,preserves
 meat,breakfast sausage
 aisles,little bites
+produce,mangos
+aisles,fresh pasta
+bakery,bread
+aisles,soup
+aisles,nuts
+aisles,tea
