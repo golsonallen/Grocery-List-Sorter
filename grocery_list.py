@@ -22,7 +22,7 @@ class Groccery_List_Organizer:
 
     #open shopping list file, store items in a list
     def open_list(self):
-        with open("groccery_list.txt", "r") as shopping_lst:
+        with open("grocery_list.txt", "r") as shopping_lst:
             items_lst = shopping_lst.read()
             items_lst = items_lst.splitlines()
             #filter out empty strings
@@ -35,52 +35,50 @@ class Groccery_List_Organizer:
             self.user_dict[department] = []
 
     #seach through shoppers list, checking what department each item is in
-    #first checks exact match, then singular vs plural, and finally multiword items
-    #if it can't find a match in any of those, ask the user for the department
+    #checks each condition and then prompts user if item not found
     def check_list(self, items_lst):
         for item in items_lst:
             for department in list(self.departments.keys()):
-                #item is in one of the departments
-                if item in self.departments[department]:
-                    self.user_dict[department].append(item)
-                    #once found break out of department loop
-                    break
-                #plural item, singular item in department or singular item, plural item in department
-                elif item[:-1] in self.departments[department] or item + 's' in self.departments[department]:
-                    self.user_dict[department].append(item)
-                    break
-                #word contained within item ex. grape(fruit) and (cream)er
-                #CHECK VICE VERSA
-                elif len([itm for itm in self.departments[department] if itm in item]) > 0:
-                    self.user_dict[department].append(item)
-                    break
-                elif len([itm for itm in self.departments[department] if itm + 's' in item or itm[:-1] in item]) > 0:
-                    self.user_dict[department].append(item)
-                    break
-                #if the item is multiword and one of the words is in a department
-                #Ex. cottage cheese where cheese is included in dairy
-                elif self.multiword_item(item, department):
-                    #multiword function inserts item into userdict
+                if len(item.split()) == 1:
+                    item_found = self.check_conditions(item, department)
+                #check frozen first
+                elif "frozen" in item.split():
+                    item_found = True
+                    department = "frozen"
+                else:
+                    item_found = self.multiword_item(item, department)
+                #break once the item is found
+                if item_found: 
+                    self.user_dict[department].append(item) 
                     break
             #check to see if the item has not been added to the user_dict
             if item not in [item for items_lst in self.user_dict.values() for item in items_lst]:
                 self.unknown_item(item)
     
     #checks if any of the words in item belong to any departments
+    #Ex. cottage cheese where cheese is included in dairy
     def multiword_item(self, item, department):
         item_lst = item.split()
-        #check frozen first
-        if "frozen" in item_lst:
-            self.user_dict["frozen"].append(item)
-            return True
         for itm in item_lst:
-            if itm in self.departments[department]:
-                self.user_dict[department].append(item)
+            found = self.check_conditions(itm, department)
+            if found:
                 return True
-            #singular vs plural
-            elif itm + 's' in self.departments[department] or itm[:-1] in self.departments[department]:
-                self.user_dict[department].append(item)
-                return True
+        return False
+    
+    #first checks exact match, then singular vs plural, finally if the item is contained in the word or vice versa
+    def check_conditions(self, item, department):
+        #item is in one of the departments
+        if item in self.departments[department]:
+            return True      
+        #plural item, singular item in department or singular item, plural item in department
+        elif item[:-1] in self.departments[department] or item + 's' in self.departments[department]:
+            return True
+        #item contained within department item ex. grape(fruit) and (cream)er
+        elif len([itm for itm in self.departments[department] if itm in item]) > 0:
+            return True
+        #vice versa
+        elif len([itm for itm in self.departments[department] if item in itm]) > 0:
+            return True
         return False
 
     def unknown_item (self, item):
@@ -113,7 +111,7 @@ class Groccery_List_Organizer:
 
     #write ordered list to output file
     def write_ordered_list(self, ordered_lst):
-        with open("sorted_groccery_list.txt", "w") as output:
+        with open("sorted_grocery_list.txt", "w") as output:
             for item in ordered_lst:
                 output.write(item + "\n")
 
