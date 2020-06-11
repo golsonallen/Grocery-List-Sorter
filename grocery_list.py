@@ -38,6 +38,7 @@ class Groccery_List_Organizer:
     #checks each condition and then prompts user if item not found
     def check_list(self, items_lst):
         for item in items_lst:
+            item = item.lower() #non case sensitive
             for department in list(self.departments.keys()):
                 if len(item.split()) == 1:
                     item_found = self.check_conditions(item, department)

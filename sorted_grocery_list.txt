@@ -1,21 +1,33 @@
-apples
-baby carrots
-mangos
-onions
-pears
-portobello mushrooms
-red peppers
+baby spinach
+baby tomatoes
+banana
+blueberries
+carrots
+coffee beans
+dried mango
+grapes
+raspberries
+bagels
 bread
-muffins
-extra lean ground beef
+buns
+smoked salmon
+chicken breasts
+chicken noodle soup
+cream cheese
 ham
-1% milk
-butter
+ice cream
+eggs
+hard boiled eggs
+light cream
 milk
-cereal
-dark chocolate
-fresh pasta
-nuts
-soup
-tea
-whole-grain waffles
+cake mix
+cesar dressing
+frosting
+pasta
+trail mix
+walnuts
+wheat thins
+frozen dinners
+frozen ham burgers
+frozen turkey burgers
+frozen waffles

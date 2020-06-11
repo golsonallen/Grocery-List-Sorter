@@ -88,3 +88,9 @@ bakery,bread
 aisles,soup
 aisles,nuts
 aisles,tea
+aisles,cesar dressing
+aisles,cake mix
+aisles,frosting
+aisles,wheat thins
+bakery,bagels
+aisles,trail mix
